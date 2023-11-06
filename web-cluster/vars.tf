@@ -30,6 +30,17 @@ variable "max_size" {
   type        = number
 }
 
+variable "ami" {
+  description = "Ami image name"
+  type 		= string
+}
+
+variable "servertext" {
+  description = "text to server"
+  type          = string
+}
+
+
 # ---------------------------------------------------------------------------------------------------------------------
 # OPTIONAL PARAMETERS
 # These parameters have reasonable defaults.
