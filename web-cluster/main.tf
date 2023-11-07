@@ -12,7 +12,7 @@ data "aws_availability_zones" "all" {
 #	default = "8081"
 #}
 
-#test branch
+#test branch v.0.0.2
 resource "aws_launch_configuration" "example" {
 	image_id = var.ami #"ami-40d28157"
 	instance_type = var.instance_type
@@ -51,7 +51,7 @@ resource "aws_security_group" "instance" {
 
 resource "aws_security_group" "ssh" {
   name        = "${var.cluster_name}-SSHSecurityGroup"
-  description = "Allow SSH access"
+  description = "Allow SSH access v.0.0.2"
   
   	ingress {
     		from_port   = 22
