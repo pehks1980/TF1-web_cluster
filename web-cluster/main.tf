@@ -50,7 +50,7 @@ resource "aws_security_group" "instance" {
 }
 
 resource "aws_security_group" "ssh" {
-  name        = "${var.cluster_name}-SSHSecurityGroup"
+  name_prefix = "${var.cluster_name}-SSHSecurityGroup"
   description = "Allow SSH access v.0.0.2"
   
   	ingress {
