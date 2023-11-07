@@ -35,7 +35,7 @@ resource "aws_launch_configuration" "example" {
 }	
 
 resource "aws_security_group" "instance" {
-	name = "${var.cluster_name}-tf1-example-instance"
+	name_prefix = "${var.cluster_name}-tf1-example-instance"
 	ingress {
 		from_port = "${var.s_port}"
 		to_port = "${var.s_port}"
@@ -123,8 +123,8 @@ resource "aws_elb" "example" {
 
 #ELB sec_group to allow 80 port
 resource "aws_security_group" "elb" {
-  name        = "${var.cluster_name}-ELBSecurityGroup"
-  description = "Allow 80 for ELB access"
+  name_prefix = "${var.cluster_name}-ELBSecurityGroup"
+  description = "Allow 80 for ELB access. v0.0.3"
 	
   lifecycle {
         create_before_destroy = true
