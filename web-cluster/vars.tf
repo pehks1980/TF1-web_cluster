@@ -35,15 +35,15 @@ variable "ami" {
   type 		= string
 }
 
+variable "aws_region" {
+  description = "aws region for s3 config"
+  type 		= string
+}
+
 variable "servertext" {
   description = "text to server"
   type          = string
 }
-
-#variable "aws_region" {
-#  description = "AWS region"
-#  type          = string
-#}
 
 variable "s_port" {
   description = "The port the server will use for HTTP requests"
