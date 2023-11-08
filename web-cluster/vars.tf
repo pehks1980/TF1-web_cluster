@@ -40,11 +40,14 @@ variable "servertext" {
   type          = string
 }
 
+variable "aws_region" {
+  description = "AWS region"
+  type          = string
+}
 
-# ---------------------------------------------------------------------------------------------------------------------
-# OPTIONAL PARAMETERS
-# These parameters have reasonable defaults.
-# ---------------------------------------------------------------------------------------------------------------------
+
+
+
 
 variable "s_port" {
   description = "The port the server will use for HTTP requests"
