@@ -40,14 +40,10 @@ variable "servertext" {
   type          = string
 }
 
-variable "aws_region" {
-  description = "AWS region"
-  type          = string
-}
-
-
-
-
+#variable "aws_region" {
+#  description = "AWS region"
+#  type          = string
+#}
 
 variable "s_port" {
   description = "The port the server will use for HTTP requests"
