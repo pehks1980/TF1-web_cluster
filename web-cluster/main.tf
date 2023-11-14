@@ -187,34 +187,6 @@ resource "aws_lb_target_group" "asg" {
         }
 }
 
-
-
-#ELB
-#resource "aws_elb" "example" {
-#	name = "${var.cluster_name}-tf-elb-example"
-#        availability_zones = ["${data.aws_availability_zones.all.names[0]}","${data.aws_availability_zones.all.names[1]}"]
-	
-#	listener { #redir 80->8081 (http)
-#		lb_port       = 80
-#		lb_protocol   = "http"
-#		instance_port = "${var.s_port}"
-#		instance_protocol = "http"
-#	}
-	
-#	health_check {
-#		healthy_threshold = 2
-#		unhealthy_threshold = 2
-#		timeout = 3
-#		interval = 30
-#		target = "HTTP:${var.s_port}/"
-#	}
-#	
-#	lifecycle {
-#          create_before_destroy = true
-#        }
-
-#}
-
 #ELB sec_group to allow 80 port
 resource "aws_security_group" "elb" {
   name_prefix = "${var.cluster_name}-ELBSecurityGroup"
